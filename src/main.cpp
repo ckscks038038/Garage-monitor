@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
-
+// comment test
 // -------- CONFIGURE THESE --------
 #define DOOR_PIN 12                        // Feather HUZZAH pin labeled "12/MISO"
 const char* WIFI_SSID = "ORBI95";
