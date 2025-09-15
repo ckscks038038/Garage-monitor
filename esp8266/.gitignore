@@ -1,0 +1,3 @@
+# Ignore local Wi-Fi secrets header
+include/secrets.h
+
