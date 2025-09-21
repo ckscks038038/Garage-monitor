@@ -5,9 +5,9 @@ services:
     container_name: mosq-cloud
     restart: unless-stopped
     ports:
-      - "1883:1883"      # 先用純 MQTT 測通
-      # - "443:9001"     # 之後要用 WebSocket+TLS 再開
+      - "1883:1883"
     volumes:
-      - ./mosquitto/config:/mosquitto/config
-      - ./mosquitto/data:/mosquitto/data
-      - ./mosquitto/log:/mosquitto/log
+      - ./mosquitto/config:/mosquitto/config:ro
+      - mosq_data:/mosquitto/data
+volumes:
+  mosq_data:
