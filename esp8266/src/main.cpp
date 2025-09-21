@@ -185,7 +185,7 @@ void loop() {
     // 3) Maintain connection during the window
     if (mqtt.connected()) {
         mqtt.loop();
-        if (!dirty && millis() > windowDeadline) {
+        if (!dirty && (long)(millis() - windowDeadline) >= 0) {
             Serial.println("Window expired. Sleeping Wi-Fi.");
             wifiRadioSleep();
         }
