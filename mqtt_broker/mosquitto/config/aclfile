@@ -1,0 +1,9 @@
+# 給「裝置」用的帳號（之後 ESP 用），只允許「寫」車庫主題
+user esp01
+topic write garage/door/#
+
+# 給「手機」用的帳號，只允許「讀」車庫主題
+user mobile1
+topic read garage/door/#
+# 若要讓手機發指令（可選）：只開這條
+# topic write home/garage/door/cmd
